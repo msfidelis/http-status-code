@@ -30,18 +30,68 @@ while true; do curl localhost:8080/random; echo; done;
 ```
 {"code":500,"message":"Internal Server Error"}
 {"code":200,"message":"Success"}
+{"code":500,"message":"Internal Server Error"}
+{"code":200,"message":"Success"}
+{"code":400,"message":"Bad Request"}
+{"code":500,"message":"Internal Server Error"}
+{"code":500,"message":"Internal Server Error"}
+{"code":500,"message":"Internal Server Error"}
+{"code":400,"message":"Bad Request"}
+{"code":500,"message":"Internal Server Error"}
+{"code":200,"message":"Success"}
+{"code":400,"message":"Bad Request"}
+{"code":200,"message":"Success"}
+```
+
+
+# 400`s
+
+# Random Request
+
+```bash
+while true; do curl localhost:8080/random/400; echo; done;
+```
+
+```
+{"code":200,"message":"Success"}
+{"code":400,"message":"Bad Request"}
+{"code":400,"message":"Bad Request"}
+{"code":200,"message":"Success"}
+{"code":400,"message":"Bad Request"}
+{"code":400,"message":"Bad Request"}
 {"code":200,"message":"Success"}
 {"code":200,"message":"Success"}
+{"code":400,"message":"Bad Request"}
+{"code":400,"message":"Bad Request"}
+{"code":200,"message":"Success"}
+{"code":400,"message":"Bad Request"}
+{"code":200,"message":"Success"}
+{"code":400,"message":"Bad Request"}
+{"code":400,"message":"Bad Request"}
 {"code":200,"message":"Success"}
 {"code":200,"message":"Success"}
+```
+
+
+# 500`s
+
+# Random Request
+
+```bash
+while true; do curl localhost:8080/random/500; echo; done;
+```
+
+```
 {"code":200,"message":"Success"}
 {"code":500,"message":"Internal Server Error"}
 {"code":500,"message":"Internal Server Error"}
 {"code":500,"message":"Internal Server Error"}
-{"code":200,"message":"Success"}
 {"code":500,"message":"Internal Server Error"}
 {"code":200,"message":"Success"}
+{"code":200,"message":"Success"}
 {"code":500,"message":"Internal Server Error"}
+{"code":500,"message":"Internal Server Error"}
+{"code":200,"message":"Success"}
 {"code":500,"message":"Internal Server Error"}
 {"code":500,"message":"Internal Server Error"}
 {"code":500,"message":"Internal Server Error"}
