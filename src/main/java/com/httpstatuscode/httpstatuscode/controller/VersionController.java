@@ -6,9 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.httpstatuscode.httpstatuscode.models.Response;
 import com.httpstatuscode.httpstatuscode.models.Version;
-import com.httpstatuscode.httpstatuscode.utils.RandomCode;
 
 @RestController
 public class VersionController {

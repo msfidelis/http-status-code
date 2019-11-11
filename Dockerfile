@@ -1,13 +1,13 @@
-FROM maven:3.5.2-jdk-9 AS build
+FROM maven:3.5-jdk-8-alpine AS builder
 
-COPY src ./src
-COPY pom.xml ./
+WORKDIR /build
+COPY . /build
 
-RUN mvn -B clean package
+RUN mvn clean package
 
 FROM openjdk:9
-COPY --from=build /target/*.jar /app.jar
+COPY --from=builder /build/target/*.jar /app.jar
 
 EXPOSE 8080
 
-ENTRYPOINT ["java","-jar","app.jar"]
+ENTRYPOINT ["java","-jar","app.jar", "-Ddebug", "-Xmx128m"]

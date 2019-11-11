@@ -12,6 +12,7 @@ import com.httpstatuscode.httpstatuscode.utils.RandomCode;
 @RestController
 public class RandomController {
 	
+	
 	@RequestMapping(value = "/random", method = RequestMethod.GET)
 	public ResponseEntity<Response> random() {
 		int random_code = RandomCode.get();
